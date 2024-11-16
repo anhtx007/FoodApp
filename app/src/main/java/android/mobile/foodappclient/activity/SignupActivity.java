@@ -1,12 +1,14 @@
 package android.mobile.foodappclient.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.mobile.foodappclient.databinding.ActivitySignupBinding;
 import android.mobile.foodappclient.model.User;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.widget.Toast;
 
 import retrofit2.Call;
@@ -64,7 +66,39 @@ public class SignupActivity extends AppCompatActivity {
         user.setPassword(pass);
 
         // Gọi API đăng ký
+        ApiService.api.register(user).enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                if (response.isSuccessful()){
+                    User user1 = response.body();
 
+                    String username = user1.getUsername();
+                    SharedPreferences sharedPreferences = getSharedPreferences("myPre",MODE_PRIVATE);
+                    SharedPreferences. Editor editor = sharedPreferences.edit();
+                    editor.putString("userName",username);
+                    editor.apply();
+
+
+                    int phone = Integer.parseInt(phoneText); // Chuyển đổi chuỗi sang kiểu int
+// Lưu số điện thoại vào SharedPreferences dưới dạng kiểu int
+                    SharedPreferences sharedPreferences_phone = getSharedPreferences("myPre",MODE_PRIVATE);
+                    SharedPreferences.Editor editor_phone = sharedPreferences_phone.edit();
+                    editor_phone.putInt("phone", phone);
+                    editor_phone.apply();
+
+                    Toast.makeText(SignupActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+
+                }
+                // Xử lý phản hồi từ API nếu cần
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                Log.e("API_CALL_FAILURE", "Đăng ký thất bại: " + t.getMessage());
+                Toast.makeText(SignupActivity.this, "Đăng ký thất bại: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 }
