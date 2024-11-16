@@ -1,5 +1,6 @@
-package android.mobile.foodappclient;
+package android.mobile.foodappclient.activity;
 
+import android.mobile.foodappclient.R;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;

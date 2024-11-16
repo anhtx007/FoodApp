@@ -1,20 +1,12 @@
 package android.mobile.foodappclient.activity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.mobile.foodappclient.databinding.ActivitySignupBinding;
 import android.mobile.foodappclient.model.User;
-import android.mobile.foodappclient.service.ApiService;
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import android.mobile.foodappclient.R;
-import android.util.Log;
 import android.widget.Toast;
 
 import retrofit2.Call;
