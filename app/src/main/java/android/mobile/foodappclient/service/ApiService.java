@@ -1,15 +1,11 @@
 package android.mobile.foodappclient.service;
 
 import android.mobile.foodappclient.model.Address;
-import android.mobile.foodappclient.model.Cart;
 import android.mobile.foodappclient.model.CartItem;
 import android.mobile.foodappclient.model.CartResponse;
 import android.mobile.foodappclient.model.Password;
-import android.mobile.foodappclient.model.Product;
 import android.mobile.foodappclient.model.User;
 import android.mobile.foodappclient.model.WithList;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
