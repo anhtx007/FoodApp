@@ -1,8 +1,11 @@
-package android.mobile.foodappclient.adpater;
+package android.mobile.foodappclient.adapter;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.mobile.foodappclient.R;
+import android.mobile.foodappclient.activity.DetailActivity;
+import android.mobile.foodappclient.model.Product;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,10 +24,6 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
 import java.util.List;
-
-import android.mobile.foodappclient.activity.DetailActivity;
-import android.mobile.foodappclient.model.Product;
-import android.mobile.foodappclient.R;
 
 public class BestfoodAdapter extends RecyclerView.Adapter<BestfoodAdapter.viewHolder> {
     List<Product> list_food;
