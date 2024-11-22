@@ -42,7 +42,6 @@ public class ListFoodAdapter extends RecyclerView.Adapter<ListFoodAdapter.viewHo
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_listfood,parent,false);
         return new viewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         Product product = list_pro.get(position);
