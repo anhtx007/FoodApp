@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.mobile.foodappclient.R;
-import android.mobile.foodappclient.activity.DetailActivity;
 import android.mobile.foodappclient.model.Product;
 import android.util.Log;
 import android.view.LayoutInflater;
