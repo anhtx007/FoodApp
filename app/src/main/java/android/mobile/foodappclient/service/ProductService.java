@@ -26,3 +26,7 @@ public interface ProductService {
 
     @GET("getProduct")
     Call<List<Product>> getSanPham();
+    @GET("getCat")
+    Call<List<Category>> getCategory();
+    @POST("getProByCat")
+    Call<List<Product>> getListCat(@Body Category product);
