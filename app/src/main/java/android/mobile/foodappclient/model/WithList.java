@@ -1,4 +1,3 @@
-
 package android.mobile.foodappclient.model;
 
 import com.google.gson.annotations.SerializedName;

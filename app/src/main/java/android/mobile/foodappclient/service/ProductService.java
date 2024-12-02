@@ -1,12 +1,13 @@
 package android.mobile.foodappclient.service;
 
+import android.mobile.foodappclient.model.Category;
+import android.mobile.foodappclient.model.Product;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.List;
 
-import android.mobile.foodappclient.model.Category;
-import android.mobile.foodappclient.model.Product;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -26,3 +27,14 @@ public interface ProductService {
 
     @GET("getProduct")
     Call<List<Product>> getSanPham();
+
+    @GET("getCat")
+    Call<List<Category>> getCategory();
+
+    @POST("getProByCat")
+    Call<List<Product>> getListCat(@Body Category product);
+
+    @POST("findProduct")
+    Call<List<Product>> getFindProduct(@Body Product product);
+
+}
