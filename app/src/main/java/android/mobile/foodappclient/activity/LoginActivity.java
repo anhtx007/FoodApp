@@ -2,7 +2,7 @@ package android.mobile.foodappclient.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.mobile.foodappclient.databinding.ActivityLoginBinding;
+import android.mobile.foodappclient.databinding.ActivityBuyBinding;
 import android.mobile.foodappclient.model.User;
 import android.mobile.foodappclient.service.ApiService;
 import android.os.Bundle;

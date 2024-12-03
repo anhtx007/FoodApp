@@ -25,9 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         new CountDownTimer(3500, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-
             }
-
             @Override
             public void onFinish() {
                 startActivity(new Intent(SplashActivity.this, IntroActivity.class));
